@@ -1,20 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import { DatePicker, Button } from "antd";
 
-function App() {
-  return (
-    <div style={{ margin: 100 }}>
-      <h1>AntDesign Demo</h1>
-      <hr />
-      <br />
-      <DatePicker style={{ backgroundColor: "#CCC" }} />
-      <Button type="primary" ghost>
-        Primary
-      </Button>
-    </div>
-  );
-}
+import App from "./src/App";
+import "./index.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
