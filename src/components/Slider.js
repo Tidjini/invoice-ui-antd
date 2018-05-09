@@ -35,7 +35,7 @@ export default class Slider extends Component {
         <Menu
           style={{ width: 256 }}
           defaultSelectedKeys={["1"]}
-          defaultOpenKeys={["sub1"]}
+          defaultOpenKeys={["1"]}
           mode={this.state.mode}
           theme={this.state.theme}
         >

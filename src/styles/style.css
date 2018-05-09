@@ -5,6 +5,9 @@
   margin: 0px;
   font-family: "Nunito", sans-serif;
 }
+body {
+  background-color: #fafbff;
+}
 .container {
   height: 100%;
   border-right: 1px solid #000;

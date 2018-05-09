@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { DatePicker, Button } from "antd";
 import Slider from "./components/Slider";
 import DayPlan from "./components/DayPlan";
+import Main from "./components/Main";
 import "./styles/style.css";
 
 import {
@@ -12,12 +13,14 @@ import {
 
 export default class App extends Component {
   state = {
-    dayPlanVisible: false
+    dayPlanVisible: false,
+    mainLeft: 256
   };
 
-  setTodayPlanVisibility(value) {
+  setTodayPlanVisibility() {
     this.setState({
-      dayPlanVisible: value
+      dayPlanVisible: !this.state.dayPlanVisible,
+      mainLeft: !this.state.dayPlanVisible ? 256 + 350 : 256
     });
   }
 
@@ -27,17 +30,11 @@ export default class App extends Component {
         <div style={{ float: "left", display: "inline-block" }}>
           <Slider onPlanDayClicked={this.setTodayPlanVisibility.bind(this)} />
         </div>
-        <DayPlan visible={this.state.dayPlanVisible} />
-        <div
-          style={{
-            position: "absolute",
-            width: 350,
-            height: 800,
-            display: "inline-block",
-            left: 256 + 350,
-            backgroundColor: "#CCC"
-          }}
+        <DayPlan
+          visible={this.state.dayPlanVisible}
+          onReturnClicked={this.setTodayPlanVisibility.bind(this)}
         />
+        <Main left={this.state.mainLeft} />
       </div>
     );
   }

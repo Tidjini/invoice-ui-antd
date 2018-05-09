@@ -7,7 +7,7 @@ import {
   gradient_colors
 } from "../utils/const/colors";
 
-const DayPlanHeader = () => {
+const DayPlanHeader = ({ onReturn }) => {
   return (
     <div>
       <div style={{ height: 30 }}>
@@ -18,6 +18,7 @@ const DayPlanHeader = () => {
             border: 0,
             float: "right"
           }}
+          onClick={onReturn}
         />
       </div>
       <div style={{ marginTop: 50, marginLeft: 30 }}>
@@ -353,7 +354,7 @@ const DayTasks = () => {
   );
 };
 
-const DayPlan = ({ visible }) => {
+const DayPlan = ({ visible, onReturnClicked }) => {
   const left = visible ? 256 : -360;
   const opacity = visible ? 1 : 0;
   return (
@@ -366,7 +367,7 @@ const DayPlan = ({ visible }) => {
         display: "inline-block"
       }}
     >
-      <DayPlanHeader />
+      <DayPlanHeader onReturn={onReturnClicked} />
       <DayTasks />
     </div>
   );
