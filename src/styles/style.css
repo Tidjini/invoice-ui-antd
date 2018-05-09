@@ -16,6 +16,8 @@
 }
 .shadow {
   position: absolute;
+  transition-timing-function: ease;
+  transition: all 0.8s;
   box-shadow: 5px 5px #cccccc80;
   z-index: 0;
 }

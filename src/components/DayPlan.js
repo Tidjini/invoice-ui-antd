@@ -355,12 +355,14 @@ const DayTasks = () => {
 
 const DayPlan = ({ visible }) => {
   const left = visible ? 256 : -360;
+  const opacity = visible ? 1 : 0;
   return (
     <div
       className="blue-gradient-color shadow"
       style={{
         width: 350,
         left: left,
+        opacity: opacity,
         display: "inline-block"
       }}
     >

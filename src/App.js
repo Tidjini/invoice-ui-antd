@@ -15,11 +15,12 @@ export default class App extends Component {
     dayPlanVisible: false
   };
 
-  setTodayPlanVisibility() {
+  setTodayPlanVisibility(value) {
     this.setState({
-      dayPlanVisible: true
+      dayPlanVisible: value
     });
   }
+
   render() {
     return (
       <div>
@@ -27,6 +28,16 @@ export default class App extends Component {
           <Slider onPlanDayClicked={this.setTodayPlanVisibility.bind(this)} />
         </div>
         <DayPlan visible={this.state.dayPlanVisible} />
+        <div
+          style={{
+            position: "absolute",
+            width: 350,
+            height: 800,
+            display: "inline-block",
+            left: 256 + 350,
+            backgroundColor: "#CCC"
+          }}
+        />
       </div>
     );
   }
