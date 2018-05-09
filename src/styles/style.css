@@ -9,3 +9,14 @@
   height: 100%;
   border-right: 1px solid #000;
 }
+
+.blue-gradient-color {
+  background: linear-gradient(to bottom, #0092ffaa, #0078ff, #005eff);
+}
+.diag {
+  height: 350px;
+  width: 350px;
+  display: inline-block;
+
+  background: linear-gradient(to bottom, #0092ffcc, #0078ff, #005eff);
+}

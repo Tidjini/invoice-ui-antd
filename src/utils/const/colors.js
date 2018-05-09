@@ -9,7 +9,8 @@ const main_colors = {
 const typo_bg_colors = {
   DARK_TYPE: "#434b65",
   LIGHT_TYPE: "#a7b1d1",
-  BACKGROUND: "#fafbff"
+  BACKGROUND: "#fafbff",
+  BACKGROUND_88: "#fafbff88"
 };
 
 const gradient_colors = {
