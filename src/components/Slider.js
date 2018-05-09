@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Icon, Switch } from "antd";
+import { Menu, Icon, Switch, Button } from "antd";
 import SliderHeader from "./SliderHeader";
 import "../styles/style.css";
 import { main_colors, typo_bg_colors } from "../utils/const/colors";
@@ -81,6 +81,24 @@ export default class Slider extends Component {
             <span style={{ fontWeight: 700 }}>Configuration</span>
           </Menu.Item>
         </Menu>
+
+        <Button
+          type="primary"
+          style={{
+            borderColor: main_colors.MAIN_COLOR_LIGHT_SHADE,
+            backgroundColor: main_colors.MAIN_COLOR_LIGHT_SHADE,
+            color: typo_bg_colors.BACKGROUND,
+            fontSize: 12,
+            fontWeight: 700,
+            marginLeft: 16,
+            marginRight: 16,
+            marginTop: 20,
+            width: 200
+          }}
+          onClick={this.props.onPlanDayClicked}
+        >
+          Today plan
+        </Button>
       </div>
     );
   }

@@ -108,4 +108,266 @@ const DayPlanHeader = () => {
   );
 };
 
-export { DayPlanHeader };
+const DayTasks = () => {
+  return (
+    <div>
+      <div style={{ marginTop: 50, marginLeft: 30, marginRight: 30 }}>
+        <h2
+          style={{
+            fontSize: 28,
+            color: typo_bg_colors.BACKGROUND,
+            fontWeight: 200,
+            padding: 0,
+            margin: 0
+          }}
+        >
+          Your tasks for today
+        </h2>
+      </div>
+      <div style={{ marginTop: 20, marginLeft: 30 }}>
+        <div
+          style={{
+            display: "table-cell",
+            verticalAlign: "middle"
+          }}
+        >
+          <Checkbox
+            style={{
+              marginTop: 7,
+              marginRight: 10,
+              borderColor: main_colors.ACCENT_COLOR,
+              borderRadius: 15
+            }}
+          />
+          <div style={{ float: "right" }}>
+            <h4
+              style={{
+                padding: 0,
+                margin: 0,
+                color: typo_bg_colors.BACKGROUND
+              }}
+            >
+              Meeting with Client
+            </h4>
+            <h6
+              style={{
+                padding: 0,
+                margin: 0,
+                color: typo_bg_colors.BACKGROUND_88
+              }}
+            >
+              Today
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div style={{ marginTop: 20, marginLeft: 30 }}>
+        <div
+          style={{
+            display: "table-cell",
+            verticalAlign: "middle"
+          }}
+        >
+          <Checkbox
+            style={{
+              marginTop: 7,
+              marginRight: 10,
+              borderColor: main_colors.ACCENT_COLOR,
+              borderRadius: 15
+            }}
+            checked
+          />
+          <div style={{ float: "right" }}>
+            <h4
+              style={{
+                padding: 0,
+                margin: 0,
+                color: typo_bg_colors.BACKGROUND,
+                textDecoration: "line-through"
+              }}
+            >
+              Pay all the taxes
+            </h4>
+            <h6
+              style={{
+                padding: 0,
+                margin: 0,
+                color: typo_bg_colors.BACKGROUND_88
+              }}
+            >
+              Today
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div style={{ marginTop: 20, marginLeft: 30 }}>
+        <div
+          style={{
+            display: "table-cell",
+            verticalAlign: "middle"
+          }}
+        >
+          <Checkbox
+            style={{
+              marginTop: 7,
+              marginRight: 10,
+              borderColor: main_colors.ACCENT_COLOR,
+              borderRadius: 15
+            }}
+            checked
+          />
+          <div style={{ float: "right" }}>
+            <h4
+              style={{
+                padding: 0,
+                margin: 0,
+                color: typo_bg_colors.BACKGROUND,
+                textDecoration: "line-through"
+              }}
+            >
+              Create the home screen for invoice
+            </h4>
+            <h6
+              style={{
+                padding: 0,
+                margin: 0,
+                color: typo_bg_colors.BACKGROUND_88
+              }}
+            >
+              Today
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div style={{ marginTop: 20, marginLeft: 30 }}>
+        <div
+          style={{
+            display: "table-cell",
+            verticalAlign: "middle"
+          }}
+        >
+          <Button
+            icon="plus"
+            type="primary"
+            ghost
+            style={{
+              color: main_colors.ACCENT_COLOR,
+              borderColor: "transparent",
+              marginRight: 10,
+              padding: 0,
+              fontSize: 12,
+              fontWeight: 700
+            }}
+          />
+
+          <div style={{ float: "right" }}>
+            <h4
+              style={{
+                padding: 0,
+                margin: 0,
+                color: typo_bg_colors.BACKGROUND,
+                fontSize: 11,
+                fontStyle: "italic"
+              }}
+            >
+              Add new task
+            </h4>
+            <h6
+              style={{
+                padding: 0,
+                margin: 0,
+                color: main_colors.ACCENT_COLOR,
+                fontStyle: "italic"
+              }}
+            >
+              Today
+            </h6>
+          </div>
+        </div>
+      </div>
+
+      <div style={{ marginTop: 30 }}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 10"
+          preserveAspectRatio="none"
+          color="#CCC"
+        >
+          <polygon points="0 0 100 10 0 10" fill="#0092ff" />
+        </svg>
+        <div className="blue-gradient-color">
+          <div style={{ marginLeft: 30, marginRight: 30 }}>
+            <h2
+              style={{
+                fontSize: 18,
+                color: typo_bg_colors.BACKGROUND,
+                fontWeight: 200,
+                padding: 0,
+                margin: 0
+              }}
+            >
+              Upcoming
+            </h2>
+          </div>
+
+          <div style={{ marginTop: 20, marginLeft: 30 }}>
+            <div
+              style={{
+                display: "table-cell",
+                verticalAlign: "middle"
+              }}
+            >
+              <Checkbox
+                style={{
+                  marginTop: 7,
+                  marginRight: 10,
+                  borderColor: main_colors.ACCENT_COLOR,
+                  borderRadius: 15
+                }}
+              />
+              <div style={{ float: "right" }}>
+                <h4
+                  style={{
+                    padding: 0,
+                    margin: 0,
+                    color: typo_bg_colors.BACKGROUND
+                  }}
+                >
+                  Meeting with Client
+                </h4>
+                <h6
+                  style={{
+                    padding: 0,
+                    margin: 0,
+                    color: typo_bg_colors.BACKGROUND_88
+                  }}
+                >
+                  Today
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const DayPlan = ({ visible }) => {
+  const left = visible ? 256 : -360;
+  return (
+    <div
+      className="blue-gradient-color shadow"
+      style={{
+        width: 350,
+        left: left,
+        display: "inline-block"
+      }}
+    >
+      <DayPlanHeader />
+      <DayTasks />
+    </div>
+  );
+};
+
+export default DayPlan;
