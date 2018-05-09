@@ -6,7 +6,17 @@ import "./styles/style.css";
 export default () => {
   return (
     <div>
-      <Slider />
+      <div style={{ float: "left", display: "inline-block" }}>
+        <Slider />
+      </div>
+      <div
+        style={{
+          backgroundColor: "#CCC",
+          width: 350,
+          height: 100,
+          display: "inline-block"
+        }}
+      />
     </div>
   );
 };

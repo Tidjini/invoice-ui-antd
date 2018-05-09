@@ -5,3 +5,7 @@
   margin: 0px;
   font-family: "Nunito", sans-serif;
 }
+.container {
+  height: 100%;
+  border-right: 1px solid #000;
+}
