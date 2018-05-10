@@ -5,7 +5,7 @@ import {
   main_colors,
   typo_bg_colors,
   gradient_colors
-} from "../utils/const/colors";
+} from "../../utils/const/colors";
 
 const WIDTH_FIX = 60;
 export default class Main extends Component {

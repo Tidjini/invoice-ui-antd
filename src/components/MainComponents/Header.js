@@ -4,9 +4,9 @@ import {
   main_colors,
   typo_bg_colors,
   gradient_colors
-} from "../utils/const/colors";
+} from "../../utils/const/colors";
 
-import { profile } from "../utils/const/images";
+import { profile } from "../../utils/const/images";
 const Search = Input.Search;
 
 export default ({ headerWidth }) => {
