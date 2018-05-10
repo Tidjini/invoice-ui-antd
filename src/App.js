@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { DatePicker, Button } from "antd";
 import Slider from "./components/Slider";
 import DayPlan from "./components/DayPlan";
 import Main from "./components/MainComponents/Main";

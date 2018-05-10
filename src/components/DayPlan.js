@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Checkbox, Calendar, Icon } from "antd";
+import { Button, Checkbox, Calendar, Icon, notification } from "antd";
 
 import {
   main_colors,
@@ -7,6 +7,25 @@ import {
   gradient_colors
 } from "../utils/const/colors";
 
+notification.config({
+  placement: "bottomRight"
+});
+const openToastNotification = () => {
+  notification.open({
+    message: (
+      <h4 style={{ color: typo_bg_colors.BACKGROUND }}>Notification Title</h4>
+    ),
+    description: (
+      <p style={{ color: typo_bg_colors.LIGHT_TYPE }}>
+        This is the content of the notification. This is the content of the
+        notification. This is the content of the notification.
+      </p>
+    ),
+    style: {
+      backgroundColor: typo_bg_colors.DARK_TYPE
+    }
+  });
+};
 const DayPlanHeader = ({ onReturn }) => {
   return (
     <div>
@@ -79,6 +98,7 @@ const DayPlanHeader = ({ onReturn }) => {
             fontSize: 12,
             fontWeight: 700
           }}
+          onClick={openToastNotification}
         >
           Review
         </Button>
