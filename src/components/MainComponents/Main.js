@@ -9,6 +9,7 @@ import {
 import HelloComponent from "./HelloComponent";
 import TotalSales from "./TotalSalesComponent";
 import RecentActivity from "./RecentActivityComponent";
+import InvoiceTable from "./InvoiceTable";
 
 const WIDTH_FIX = 60;
 export default class Main extends Component {
@@ -32,6 +33,7 @@ export default class Main extends Component {
 
         <TotalSales width={mainWidth / 2 - 50} marginTop={50} />
         <RecentActivity marginTop={50} width={mainWidth / 2 - 50} />
+        <InvoiceTable marginTop={50} width={mainWidth - 70} />
       </div>
     );
   }
