@@ -13,7 +13,6 @@ export default ({ headerWidth }) => {
   return (
     <div
       style={{
-        margin: 20,
         width: headerWidth,
         height: 60,
         position: "relative",
