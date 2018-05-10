@@ -26,7 +26,8 @@ const openToastNotification = () => {
     }
   });
 };
-const DayPlanHeader = ({ onReturn }) => {
+
+const DayPlanHeader = ({ onReturn, displayModalClicked }) => {
   return (
     <div>
       <div style={{ height: 30 }}>
@@ -104,6 +105,7 @@ const DayPlanHeader = ({ onReturn }) => {
         </Button>
         <Button
           type="primary"
+          onClick={displayModalClicked}
           ghost
           style={{
             marginLeft: 16,
@@ -374,7 +376,7 @@ const DayTasks = () => {
   );
 };
 
-const DayPlan = ({ visible, onReturnClicked }) => {
+const DayPlan = ({ visible, onReturnClicked, displayModal }) => {
   const left = visible ? 256 : -360;
   const opacity = visible ? 1 : 0;
   return (
@@ -389,7 +391,10 @@ const DayPlan = ({ visible, onReturnClicked }) => {
         backgroundColor: "#CCC"
       }}
     >
-      <DayPlanHeader onReturn={onReturnClicked} />
+      <DayPlanHeader
+        onReturn={onReturnClicked}
+        displayModalClicked={displayModal}
+      />
       <DayTasks />
     </div>
   );

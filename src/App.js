@@ -3,7 +3,7 @@ import Slider from "./components/Slider";
 import DayPlan from "./components/DayPlan";
 import Main from "./components/MainComponents/Main";
 import Notification from "./components/Notification/Notification";
-
+import { Modal } from "antd";
 import "./styles/style.css";
 
 import {
@@ -16,7 +16,7 @@ export default class App extends Component {
   state = {
     dayPlanVisible: false,
     mainLeft: 256,
-    notificationOpenState: false
+    modalVisible: false
   };
 
   setTodayPlanVisibility() {
@@ -26,12 +26,33 @@ export default class App extends Component {
     });
   }
 
-  displayNotification() {
+  displayModal(modalVisible) {
+    console.log("modal ci", modalVisible);
+    this.setState({
+      modalVisible: modalVisible
+    });
+  }
+  displayNotification(value) {
     this.setState({
       notificationOpenState: !this.state.notificationOpenState
     });
   }
 
+  ModalCompo = () => {
+    return (
+      <Modal
+        title="Vertically centered modal dialog"
+        wrapClassName="vertical-center-modal"
+        visible={this.state.modalVisible}
+        onOk={() => this.displayModal(false)}
+        onCancel={() => this.displayModal(false)}
+      >
+        <p>some contents...</p>
+        <p>some contents...</p>
+        <p>some contents...</p>
+      </Modal>
+    );
+  };
   render() {
     return (
       <div>
@@ -41,6 +62,9 @@ export default class App extends Component {
         <DayPlan
           visible={this.state.dayPlanVisible}
           onReturnClicked={this.setTodayPlanVisibility.bind(this)}
+          displayModal={() => {
+            this.displayModal(true);
+          }}
         />
         <Main
           left={this.state.mainLeft}
@@ -50,6 +74,7 @@ export default class App extends Component {
           notificationOpenState={this.state.notificationOpenState}
           onCloseNotification={this.displayNotification.bind(this)}
         />
+        {this.ModalCompo()}
       </div>
     );
   }
