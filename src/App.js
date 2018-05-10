@@ -3,6 +3,8 @@ import { DatePicker, Button } from "antd";
 import Slider from "./components/Slider";
 import DayPlan from "./components/DayPlan";
 import Main from "./components/MainComponents/Main";
+import Notification from "./components/Notification/Notification";
+
 import "./styles/style.css";
 
 import {
@@ -14,13 +16,20 @@ import {
 export default class App extends Component {
   state = {
     dayPlanVisible: false,
-    mainLeft: 256
+    mainLeft: 256,
+    notificationOpenState: false
   };
 
   setTodayPlanVisibility() {
     this.setState({
       dayPlanVisible: !this.state.dayPlanVisible,
       mainLeft: !this.state.dayPlanVisible ? 256 + 350 : 256
+    });
+  }
+
+  displayNotification() {
+    this.setState({
+      notificationOpenState: !this.state.notificationOpenState
     });
   }
 
@@ -34,7 +43,14 @@ export default class App extends Component {
           visible={this.state.dayPlanVisible}
           onReturnClicked={this.setTodayPlanVisibility.bind(this)}
         />
-        <Main left={this.state.mainLeft} />
+        <Main
+          left={this.state.mainLeft}
+          displayNotification={this.displayNotification.bind(this)}
+        />
+        <Notification
+          notificationOpenState={this.state.notificationOpenState}
+          onCloseNotification={this.displayNotification.bind(this)}
+        />
       </div>
     );
   }

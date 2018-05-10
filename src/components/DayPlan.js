@@ -365,7 +365,7 @@ const DayPlan = ({ visible, onReturnClicked }) => {
         left: left,
         opacity: opacity,
         display: "inline-block",
-        height: 1200,
+        height: 1250,
         backgroundColor: "#CCC"
       }}
     >

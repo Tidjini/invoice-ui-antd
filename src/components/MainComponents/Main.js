@@ -28,7 +28,10 @@ export default class Main extends Component {
           padding: 20
         }}
       >
-        <Header headerWidth={mainWidth} />
+        <Header
+          headerWidth={mainWidth}
+          onNotificationClicked={this.props.displayNotification}
+        />
         <HelloComponent marginTop={50} />
 
         <TotalSales width={mainWidth / 2 - 50} marginTop={50} />

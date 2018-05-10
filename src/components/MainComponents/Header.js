@@ -9,7 +9,7 @@ import {
 import { profile } from "../../utils/const/images";
 const Search = Input.Search;
 
-export default ({ headerWidth }) => {
+export default ({ headerWidth, onNotificationClicked }) => {
   return (
     <div
       style={{
@@ -52,6 +52,7 @@ export default ({ headerWidth }) => {
           <Badge count={2}>
             <a
               href="#"
+              onClick={onNotificationClicked}
               style={{
                 width: 28,
                 height: 28,
