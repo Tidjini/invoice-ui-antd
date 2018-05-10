@@ -28,7 +28,13 @@ export default class TotalSales extends Component {
       }
     };
     return (
-      <div style={{ width, marginTop: this.props.marginTop, float: "left" }}>
+      <div
+        style={{
+          width,
+          marginTop: this.props.marginTop,
+          float: "left"
+        }}
+      >
         <div
           style={{
             width: width - 30,
@@ -75,27 +81,42 @@ export default class TotalSales extends Component {
             180 000,00 DA
           </h1>
         </div>
-
-        <Chart height={350} data={dv} scale={cols} forceFit>
-          <Legend />
-          <Axis name="month" />
-          <Axis name="temperature" label={{ formatter: val => `${val}K DA` }} />
-          <Tooltip crosshairs={{ type: "y" }} />
-          <Geom
-            type="line"
-            position="month*temperature"
-            size={2}
-            color={"city"}
-          />
-          <Geom
-            type="point"
-            position="month*temperature"
-            size={4}
-            shape={"circle"}
-            color={"city"}
-            style={{ stroke: "#fff", lineWidth: 1 }}
-          />
-        </Chart>
+        <div
+          style={{
+            width: width,
+            float: "left"
+          }}
+        >
+          <Chart
+            width={width}
+            height={300}
+            data={dv}
+            scale={cols}
+            forceFit={false}
+          >
+            <Legend />
+            <Axis name="month" />
+            <Axis
+              name="temperature"
+              label={{ formatter: val => `${val}K DA` }}
+            />
+            <Tooltip crosshairs={{ type: "y" }} />
+            <Geom
+              type="line"
+              position="month*temperature"
+              size={2}
+              color={"city"}
+            />
+            <Geom
+              type="point"
+              position="month*temperature"
+              size={4}
+              shape={"circle"}
+              color={"city"}
+              style={{ stroke: "#fff", lineWidth: 1 }}
+            />
+          </Chart>
+        </div>
       </div>
     );
   }

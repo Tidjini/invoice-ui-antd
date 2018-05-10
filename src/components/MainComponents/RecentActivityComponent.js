@@ -56,7 +56,7 @@ export default ({ width, marginTop }) => {
         </div>
       </div>
       <div style={{ display: "inline-block", marginTop: 20 }}>
-        <Timeline pending="In Progress...">
+        <Timeline pending="In Progress..." reverse>
           <Timeline.Item color={main_colors.THIRD_COLOR}>
             <div>
               <h3
