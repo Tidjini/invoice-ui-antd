@@ -8,6 +8,7 @@ import {
 } from "../../utils/const/colors";
 import HelloComponent from "./HelloComponent";
 import TotalSales from "./TotalSalesComponent";
+import RecentActivity from "./RecentActivityComponent";
 
 const WIDTH_FIX = 60;
 export default class Main extends Component {
@@ -30,6 +31,7 @@ export default class Main extends Component {
         <HelloComponent marginTop={50} />
 
         <TotalSales width={mainWidth / 2 - 50} marginTop={50} />
+        <RecentActivity marginTop={50} width={mainWidth / 2 - 50} />
       </div>
     );
   }

@@ -12,6 +12,7 @@ import {
 export default class TotalSales extends Component {
   render() {
     const width = this.props.width || 450;
+
     const ds = new DataSet();
     const dv = ds.createView().source(data);
     dv.transform({
@@ -27,7 +28,7 @@ export default class TotalSales extends Component {
       }
     };
     return (
-      <div style={{ width, marginTop: this.props.marginTop }}>
+      <div style={{ width, marginTop: this.props.marginTop, float: "left" }}>
         <div
           style={{
             width: width - 30,
