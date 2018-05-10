@@ -7,10 +7,12 @@ import {
   gradient_colors
 } from "../../utils/const/colors";
 import HelloComponent from "./HelloComponent";
+import TotalSales from "./TotalSalesComponent";
 
 const WIDTH_FIX = 60;
 export default class Main extends Component {
   render() {
+    const mainWidth = window.innerWidth - this.props.left - WIDTH_FIX;
     return (
       <div
         style={{
@@ -20,12 +22,14 @@ export default class Main extends Component {
           backgroundColor: typo_bg_colors.BACKGROUND,
           transitionTimingFunction: "ease-in-out",
           transition: "all 0.8s",
-          width: window.innerWidth - this.props.left - WIDTH_FIX,
+          width: mainWidth,
           padding: 20
         }}
       >
-        <Header headerWidth={window.innerWidth - this.props.left - WIDTH_FIX} />
+        <Header headerWidth={mainWidth} />
         <HelloComponent marginTop={50} />
+
+        <TotalSales width={mainWidth / 2 - 50} marginTop={50} />
       </div>
     );
   }
