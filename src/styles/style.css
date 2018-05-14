@@ -1,12 +1,22 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700");
 
 * {
   padding: 0px;
   margin: 0px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
 body {
-  background-color: #fafbff;
+  background-color: #eaf7fd;
+}
+nav {
+  background-color: #fff;
+  height: 60px;
+  width: 100%;
+  color: #585d54;
+  border-bottom: 1px solid #dae3e6;
+}
+a {
+  text-decoration: none;
 }
 .container {
   height: 100%;

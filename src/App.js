@@ -3,6 +3,7 @@ import Slider from "./components/Slider";
 import DayPlan from "./components/DayPlan";
 import Main from "./components/MainComponents/Main";
 import Notification from "./components/Notification/Notification";
+import Logo from "./Hotel/components/logo";
 import { Modal } from "antd";
 import "./styles/style.css";
 
@@ -56,7 +57,16 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <div style={{ float: "left", display: "inline-block" }}>
+        <nav>
+          <Logo />
+        </nav>
+      </div>
+    );
+  }
+}
+
+{
+  /* <div style={{ float: "left", display: "inline-block" }}>
           <Slider onPlanDayClicked={this.setTodayPlanVisibility.bind(this)} />
         </div>
         <DayPlan
@@ -74,8 +84,5 @@ export default class App extends Component {
           notificationOpenState={this.state.notificationOpenState}
           onCloseNotification={this.displayNotification.bind(this)}
         />
-        {this.ModalCompo()}
-      </div>
-    );
-  }
+        {this.ModalCompo()} */
 }
