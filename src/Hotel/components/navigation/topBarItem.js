@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "antd";
 
-import "./css/style.css";
+import "../css/style.css";
 
 export default ({ icon, content, color }) => {
   return (

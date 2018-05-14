@@ -1,3 +1,4 @@
+/* logo */
 .logo {
   display: block;
   float: left;
@@ -11,7 +12,9 @@
   text-transform: uppercase;
   font-weight: 700;
 }
+/* logo */
 
+/* nav item */
 .nav-item {
   display: inline-block;
   padding: 20px 50px;
@@ -28,3 +31,41 @@
   font-size: 14px;
   font-weight: 600;
 }
+/* nav item */
+
+/* nav custom item */
+.nav-custom-item {
+  display: inline-block;
+  border-left: 1px solid #dae3e6;
+  height: 60px;
+  padding: 8px 50px;
+}
+.user-info {
+  text-align: right;
+  float: left;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+.user-info h4 {
+  font-size: 16px;
+  line-height: 0.7;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+.user-info h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.nav-custom-item img {
+  width: 42px;
+  height: 42px;
+  border-radius: 24px;
+}
+
+.down {
+  color: #585d54;
+  font-size: 14px;
+  margin-left: 5px;
+}
+/* nav custom item */
