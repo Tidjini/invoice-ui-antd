@@ -1,0 +1,30 @@
+.logo {
+  display: block;
+  float: left;
+  height: 60px;
+  width: 250px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.logo h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 20px 50px;
+  border-left: 1px solid #dae3e6;
+  height: 60px;
+}
+.nav-item-icon {
+  font-size: 16px;
+  padding: 2px 6px;
+}
+
+.nav-item h4 {
+  float: right;
+  font-size: 14px;
+  font-weight: 600;
+}

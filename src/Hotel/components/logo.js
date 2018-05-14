@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "antd";
 
-import "./css/logo.css";
+import "./css/style.css";
 
 export default ({
   companyLogo,
