@@ -5,6 +5,7 @@ import Main from "./components/MainComponents/Main";
 import Notification from "./components/Notification/Notification";
 import TopNavBar from "./Hotel/components/navigation/topNavBar";
 import LeftMenu from "./Hotel/components/LeftMenu/menu";
+import CustomTabs from "./Hotel/components/tab/Tabs";
 import { Modal } from "antd";
 import "./styles/style.css";
 
@@ -59,7 +60,9 @@ export default class App extends Component {
     return (
       <div>
         <TopNavBar />
+
         <LeftMenu />
+        <CustomTabs />
       </div>
     );
   }
